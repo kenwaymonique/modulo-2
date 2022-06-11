@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(101, 132, 156);
+}
+
+
+#header{
+    padding: 30px;
+    text-align: center;
+    background-image: url("../img/banner.jpg");
+    color: rgb(255, 255, 255);
+}
+
+
+#header{
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+}
+
+#main{
+    margin: auto;
+    font-size: 20px;
+    width: 50%;
+    text-align: justify;
+    background-color: rgb(196, 136, 188);
+}
+
+#content{
+    display: flex;
+}
+
+.box{
+    padding: 10px;
+}
+
+.box h2{
+    border-bottom: 1px solid rgb(42, 32, 62);
+    color: rgb(42, 32, 62);
+}
+
+#onerepublic{
+    height: 500px;
+    width: 500px;
+}
+
+#footer{
+    text-align: center;
+    border-top: 1px solid rgb(42, 32, 62);
+    color: rgb(42, 32, 62);
+}
+
+@media  screen and (max-width: 1440px) {
+    #main{
+        width: 80%;
+        font-size: 16px;
+    }    
+    #onerepublic{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-image: none;
+        }
+        #main{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            font-size: 14px;
+        }
+        #content{
+            display: block;
+        }
+}
