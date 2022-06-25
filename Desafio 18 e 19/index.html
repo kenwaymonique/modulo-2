@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#home"><img src="img/logo.png">
+  <div id="myLinks">
+    <a href="#">Max Verstappen</a>
+    <a href="#">Carlos Sainz</a>
+    <a href="#">Sebastian Vettel</a>
+  </div>
+
+  <div class="content">
+    <div id="danny">
+    <a href="#"><b>URGENTE NA FÓRMULA 1</b></a>
+    <img src="img/danny.jpg">
+    <p>Daniel Ricciardo acaba de ser eleito o homem mais lindo do mundo por Monique Kenway</p>
+    </div>
+    <div id="pierre">
+        <a href="#"><b>Entenda o caso de Pierre Gasly</b></a>
+        <img src="img/gasly.jpg">
+        <p>O homem mais talarico do mundo</p>
+    </div>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="bi bi-caret-down"></i>
+  </a>
+</div>
+<script>
+    function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+</body>
