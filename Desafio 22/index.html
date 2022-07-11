@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    
+    <style>
+        #bg{
+            background-color: darkgreen;
+        }
+
+        #main img{
+            height: 500px;
+            width: 500px;
+            margin: auto;
+            padding-left: 500px;
+        }
+
+        h2{
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="bg">
+
+    <h2>Obrigada por jogar, logo logo, vamos jogar pessoalmente</h2>
+    <div id="main">
+        <img src="img/iwant.jpg">
+    </div>
+
+
+    <script>
+
+        const player = prompt("Qual seu nome, player one?")
+        let pronto = ''
+        let pontos = 0
+        let answer
+        let cont = 0
+        let op = 10
+
+        while (op != 0) {
+            op = prompt('Qual será o tema que você irá jogar? \n Hockey \n Marvel \n Friends \n Ou digite 0 para sair \n (Lembre-se, player one, de digitar tudo em minúsculo)')
+
+            switch (op) {
+                case 'hockey':
+                    hockey()
+                    break;
+
+                case 'marvel':
+                    marvel()
+                    break;
+
+                case 'friends':
+                    friends()
+                    break;
+
+                default:
+                    alert("Pô, player one, você saiu")
+                    break;
+            }
+        }
+
+        function hockey() {
+
+            answer = prompt("Qual o número do famoso jogador Wayne Gretsky?")
+            if (answer == '99') {
+                alert("Boa! Espero só que você não seja fã dos Oilers")
+                pontos++
+            } else {
+                alert(`${player} mandou mal`)
+            }
+            answer = prompt("Qual o número do jogador recem recontratado pelo Pittsburgh Penguins?")
+            if (answer == '58') {
+                alert("Boa, player one, é assim que se faz no Burgo!")
+                pontos++
+            } else {
+                alert(`${player} mandou mal`)
+            }
+            answer = prompt("Qual o número do defenseman ganhador do Norris de 2022?")
+            if (answer == '8') {
+                alert("Boa! Cale Makar é para poucos")
+                pontos++
+            } else {
+                alert(`${player} mandou mal`)
+            }
+
+                alert(`${player}, você teve o total de ${pontos} pontos em todo o quiz `)
+
+        }
+
+        function marvel() {
+
+            answer = prompt("Quem estava certo em Guerra Civil? (Lembre-se de digitar tudo em minúsculo)")
+            if (answer == 'homem de ferro') {
+                alert("Boa, player one, obviamente Tony Stark estava certo")
+                pontos++
+            } else {
+                alert(`${player} mandou mal, tem certeza que assistiu o filme direito?`)
+            }
+            answer = prompt("Quantos são os Vingadores originais?")
+            if (answer == '6') {
+                alert("Boa!")
+                pontos++
+            } else {
+                alert(`${player} mandou mal`)
+            }
+            answer = prompt("Qual a personagem mais chata da Marvel? Digite seu nome de super-heroina")
+            if (answer == 'feiticeira escarlate') {
+                alert("Obviamente, player one, essa mulher é doida")
+                pontos++
+            } else {
+                alert(`${player} mandou mal, é a Feiticeira Escarlate`)
+            }
+
+                alert(`${player}, você teve o total de ${pontos} pontos em todo o quiz `)
+
+        }
+
+        function friends() {
+
+            answer = prompt("Ross e Rachel, quem estava certo?")
+            if (answer == 'ross') {
+                alert("Claramente ele estava certo, a mulher endoideceu")
+                pontos++
+            } else {
+                alert(`${player} mandou mal, THEY WERE ONE A BREAK, player one!`)
+            }
+            answer = prompt("Com quem Phoebe disse que não namoraria?")
+            if (answer == 'monica') {
+                alert("Não julgo, eu também não namoraria ela")
+                pontos++
+            } else {
+                alert(`${player} mandou mal, é a Monica`)
+            }
+            answer = prompt("Joey doesn't share...")
+            if (answer == 'food') {
+                alert("Boa! Sabemos que ele não compartilha sua comida (nem eu)")
+                pontos++
+            } else {
+                alert(`${player} mandou mal`)
+            }
+                alert(`${player}, você teve o total de ${pontos} pontos em todo o quiz `)
+
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
