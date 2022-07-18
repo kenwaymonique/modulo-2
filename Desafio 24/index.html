@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Nomes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet">
+    <style>
+        .content {
+            font-size: 30px;
+            font-family: 'Edu VIC WA NT Beginner', cursive;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .botoes {
+            text-align: center;
+        }
+
+        #nomes {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .bt {
+            background: rgb(124, 243, 160);
+
+            color: black;
+
+            border: 1px solid #eee;
+
+            border-radius: 20px;
+
+            box-shadow: 5px 5px 5px #eee;
+
+            text-shadow: none;
+
+        }
+
+        .bt:hover {
+
+            background: rgb(255, 69, 181);
+
+            color: #fff;
+
+            border: 1px solid #eee;
+
+            border-radius: 20px;
+
+            box-shadow: 5px 5px 5px #eee;
+
+            text-shadow: none;
+
+        }
+
+        body {
+            background-color: #B4F8C8;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%23B4F8C8' width='11' height='11'/%3E%3Crect fill='%23b7f7c5' x='10' width='11' height='11'/%3E%3Crect fill='%23b9f6c2' y='10' width='11' height='11'/%3E%3Crect fill='%23bcf5bf' x='20' width='11' height='11'/%3E%3Crect fill='%23bef4bc' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%23c1f2ba' y='20' width='11' height='11'/%3E%3Crect fill='%23c3f1b7' x='30' width='11' height='11'/%3E%3Crect fill='%23c6f0b5' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23c8efb2' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%23cbedb0' y='30' width='11' height='11'/%3E%3Crect fill='%23cdecae' x='40' width='11' height='11'/%3E%3Crect fill='%23d0ebab' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23d2eaa9' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23d5e8a8' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23d7e7a6' y='40' width='11' height='11'/%3E%3Crect fill='%23d9e6a4' x='50' width='11' height='11'/%3E%3Crect fill='%23dce4a2' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%23dee3a1' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%23e0e1a0' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%23e2e09e' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%23e4df9d' y='50' width='11' height='11'/%3E%3Crect fill='%23e6dd9c' x='60' width='11' height='11'/%3E%3Crect fill='%23e8dc9b' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%23eada9b' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%23ecd99a' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%23eed799' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%23f0d699' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%23f2d499' x='70' width='11' height='11'/%3E%3Crect fill='%23f4d398' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23f5d198' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23f7d098' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23f8ce98' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23facd99' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23fbcb99' x='80' width='11' height='11'/%3E%3Crect fill='%23fcca9a' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23fec99a' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23ffc79b' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23ffc69b' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23ffc49c' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23ffc39d' x='90' width='11' height='11'/%3E%3Crect fill='%23ffc29e' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23ffc09f' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23ffbfa0' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23ffbea2' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23ffbca3' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23ffbba4' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23ffbaa6' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23ffb9a7' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23ffb8a9' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23ffb7aa' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23ffb6ac' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23ffb5ae' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23ffb4af' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23ffb3b1' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23ffb2b3' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23ffb1b5' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23ffb0b6' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23ffafb8' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23ffafba' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23FFAEBC' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h2>Gerador de Nomes</h2>
+    </div>
+
+    <div class="names">
+        <p id="nomes"></p>
+    </div>
+
+    <div class="botoes">
+        <button class="bt" type="button" onclick="mostraNomes()">Gerar</button>
+        <button class="bt" type="button" onclick="addNomes()">Adicione um nome</button>
+    </div>
+    <script>
+
+        let name = ['Guentzel', 'Crosby', 'Jarry', 'Malkin', 'Rust', 'Svechnikov', 'Jarvis', 'Seguin', 'Seider', 'Huberdeau']
+
+        function mostraNomes() {
+            let mostraNames = parseInt(Math.random() * (name.length - 1) + 1)
+            document.getElementById("nomes").innerHTML = "Nome gerado foi: " + name[mostraNames]
+            if (name) {
+                console.log("Correto")
+                return true
+            } else {
+                console.log("Erro")
+                return false
+            }
+        }
+        function addNomes() {
+            let addName = prompt("Adicione um nome")
+            name.push(addName)
+        }
+
+
+    </script>
+
+</body>
+
+</html>
