@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        * { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+input, label {
+  display: block;
+  outline: none;
+}
+body {
+  padding-top: 30px;
+  background-color:rgb(205, 244, 195);
+}
+.main{
+    width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 25px;
+}
+.main h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 25px; /* rem relacionada a um elemento root, essa por exemplo é 1.6 do elemento root*/
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#nome, #sobrenome, #email, #regiao, #genero, #cadastrar{
+    flex: 1 1 100%;
+  position: relative;
+  padding-bottom: 10px;
+}
+label {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+input {
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+
+input[type="submit"] {
+  background-color:rgb(74, 171, 117);
+  color: #FFF;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+}
+    </style>
+</head>
+
+<body class="bg">
+    <div class="main">
+        <h1>Cadastro</h1>
+        <form id="formulario" action="" method="post">
+            <label>Nome</label>
+            <input type="text" id="nome" placeholder="Insira seu nome" required>
+            <label>Sobrenome</label>
+            <input type="text" id="sobrenome" placeholder="Insira seu sobrenome">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Insira seu email">
+            <label>Região</label>
+            <select id="regiao">
+                <option>Sul</option>
+                <option>Norte</option>
+                <option>Nordeste</option>
+                <option>Sudeste</option>
+                <option>Centro-Oeste</option>
+            </select>
+            <label>Gênero</label>
+            <input type="radio" value="fem" name="genero"><span>Feminino</span>
+            <input type="radio" value="masc" name="genero"><span>Masculino</span>
+            <input type="radio" value="nb" name="genero"><span>Não-binário</span>
+            <br>
+            <input type="submit" value="Cadastrar" id="cadastrar">
+        </form>
+    </div>
+
+    <script>
+        function valida() {
+            let nome = document.getElementById('nome').value;
+            if (nome == "") {
+                alert("Por favor, preencha esse campo");
+                document.getElementById('nome').focus();
+                return false;
+            }
+            let sobrenome = document.getElementById('sobrenome').value;
+            if (sobrenome == "") {
+                alert("Por favor, preencha esse campo");
+                document.getElementById('sobrenome').focus();
+                return false;
+            }
+            var mailformat = /^\w+([\.-]?\w+)*@\w([\.-]?\w+)*(\.w{2,3})+$/;
+            if (email.value.match(mailformat)) {
+                alert("Email válido");
+                email.focus();
+            } else {
+                alert('Email inválido')
+                email.focus();
+                return false
+            }
+
+            return true
+        }
+
+    </script>
+</body>
+
+</html>
