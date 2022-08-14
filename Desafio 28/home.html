@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="carrossel-container">
+        <div class="slides fade">
+            <div class="numText">1/3</div>
+            <img src="img/tumblr_c6ae3d842c93b2a4f07b0c137d2e0ac1_1f913e0f_2048.jpg">
+            <div class="text">Pens Roster</div>
+        </div>
+        <div class="slides fade">
+            <div class="numText">2/3</div>
+            <img src="img/tyler-seguin.jpg">
+            <div class="text">Tyler Seguin</div>
+        </div>
+        <div class="slides fade">
+            <div class="numText">3/3</div>
+            <img src="img/usatsi_16041870.jpg">
+            <div class="text">Kirill Kaprisov</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <br>
+
+    <div style="text-align: center;">
+        <span class="ponto" onclick="slideAtual(1)"></span>
+        <span class="ponto" onclick="slideAtual(2)"></span>
+        <span class="ponto" onclick="slideAtual(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        mostraSlides(slideIndex);
+
+        function plusSlides(n){
+            mostraSlides(slideIndex += n)
+        }
+
+        function slideAtual(n){
+            mostraSlides(slideIndex = n)
+        }
+
+        function mostraSlides(n){
+            let i;
+            let slides = document.getElementsByClassName("slides")
+            let ponto = document.getElementsByClassName("ponto")
+
+            if(n > slides.length){
+                slideIndex = 1;
+            }
+            if(n < 1){
+                slideIndex = slides.length;
+            }
+
+            for(i=0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            for(i=0; i < ponto.length; i++){
+                ponto[i].className = ponto[1].className.replace(" active"," ");
+            }
+            slides[slideIndex-1].style.display = "block";
+            pontos[slideIndex-1].className += " active";
+
+        }
+    </script>
+</body>
+
+</html>
